@@ -27,6 +27,10 @@ jobs:
             name: report
             path: report.html
 
+      - name: Check if report.html exists
+        run: ls -la report.html
+
+
 
       - name: HTML Preview
         id: html_preview
