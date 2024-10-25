@@ -19,4 +19,4 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
-        run: pytest --env qa --html=report.html
+        run: pytest tests/ --env qa --html=report.html
