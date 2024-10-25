@@ -19,7 +19,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
-        run: pytest --env qa --html=report.html -m page
+        run: pytest --env qa --html=selenium_python/report.html -m page
 
 #      - name: Upload HTML Report
 #        uses: actions/upload-artifact@v3
@@ -36,5 +36,5 @@ jobs:
         id: html_preview
         uses: pavi2410/html-preview-action@v4
         with:
-          html_file: 'home/runner/work/selenium_python/selenium_python/report.html'  # Assuming report.html is in the current working directory
+          html_file: 'selenium_python/report.html'  # Assuming report.html is in the current working directory
           job_summary: true
