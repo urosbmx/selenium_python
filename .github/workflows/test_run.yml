@@ -36,5 +36,5 @@ jobs:
         id: html_preview
         uses: pavi2410/html-preview-action@v4
         with:
-          html_file: 'report.html'  # Assuming report.html is in the current working directory
+          html_file: 'home/runner/work/selenium_python/selenium_python/report.html'  # Assuming report.html is in the current working directory
           job_summary: true
