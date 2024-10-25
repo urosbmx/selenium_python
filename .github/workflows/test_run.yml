@@ -19,25 +19,22 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Tests
-        run: pytest  --env qa --html=report.html -m page
+        run: pytest --env qa --html=report.html -m page
 
       - name: Upload HTML Report
         uses: actions/upload-artifact@v3
         with:
-            name: report
-            path: report.html
+          name: report
+          path: report.html
 
       - name: Find full path of report.html
         run: |
           echo "Report location:"
           find $GITHUB_WORKSPACE -name "report.html"
-      
-      
-      
 
       - name: HTML Preview
         id: html_preview
         uses: pavi2410/html-preview-action@v4
         with:
-          html_file: '/selenium_python/report.html'
+          html_file: 'report.html'  # Assuming report.html is in the current working directory
           job_summary: true
