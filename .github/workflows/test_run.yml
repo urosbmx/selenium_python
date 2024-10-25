@@ -21,6 +21,11 @@ jobs:
       - name: Run Tests
         run: pytest  --env qa --html=report.html -m page
 
+      - name: Upload HTML Report
+        uses: actions/upload-artifact@v3
+        with:
+            name: report
+            path: report.html
 
 
       - name: HTML Preview
